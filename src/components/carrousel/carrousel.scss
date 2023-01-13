@@ -1,0 +1,21 @@
+.carrousel {
+  overflow: hidden;
+}
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+.carrousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: green;
+  color: #fff;
+}
+.indicators {
+  .active {
+    background-color: green;
+    color: #fff;
+  }
+}
