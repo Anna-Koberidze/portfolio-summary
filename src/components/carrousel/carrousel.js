@@ -15,16 +15,16 @@ const Carrousel = () => {
     setActiveIndex(newIndex);
   };
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   if (!paused) {
-    //     updateIndex(activeIndex + 1);
-    //   }
-    // }, 10000);
-    // return () => {
-    //   if (interval) {
-    //     clearInterval(interval);
-    //   }
-    // };
+    const interval = setInterval(() => {
+      if (!paused) {
+        updateIndex(activeIndex + 1);
+      }
+    }, 3000);
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   });
   let active = false;
   const timeOut = setTimeout((active = true), 3000);

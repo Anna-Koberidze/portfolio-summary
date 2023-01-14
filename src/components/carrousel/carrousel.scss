@@ -32,7 +32,6 @@
 .content {
   visibility: hidden;
   position: absolute;
-  top: 50%;
   left: 5rem;
   opacity: 1;
   width: 50%;
@@ -41,6 +40,7 @@
   backdrop-filter: blur(5px);
   border-radius: 10px;
   z-index: 5;
+  top: 50%;
   transform: translateY(0);
 }
 
@@ -66,8 +66,10 @@
 
 .inner {
   white-space: nowrap;
+  display: flex;
+  align-items: flex-start;
   transition: transform 0.3s;
-  height: 500px;
+  height: 550px;
   hr {
     height: 2px;
     background: var(--white-content);
@@ -75,15 +77,15 @@
   }
 }
 .carrousel-item {
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  width: 100%;
+  height: fit-content;
+  min-width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .arrows-container {
   .arrow {
+    user-select: none;
     border: 2px solid var(--white-content);
     border-radius: 50%;
     background-color: transparent;
@@ -112,6 +114,7 @@
   overflow-y: hidden;
   font-size: 70px;
   position: absolute;
+  user-select: none;
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
@@ -164,16 +167,16 @@ img {
 @keyframes slide-up-welcome {
   0% {
     visibility: hidden;
-    top: 40rem;
+    top: 80rem;
   }
   2% {
     visibility: hidden;
-    top: 40rem;
+    top: 80rem;
   }
 
   100% {
     visibility: visible;
-    top: 17rem;
+    top: 12rem;
   }
 }
 
