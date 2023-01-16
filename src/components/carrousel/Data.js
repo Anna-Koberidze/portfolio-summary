@@ -32,3 +32,4 @@ export const sliderData = [
     cntClassName: "-my-contacts",
   },
 ];
+export default sliderData;
