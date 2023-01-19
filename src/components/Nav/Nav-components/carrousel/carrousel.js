@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import "./carrousel.scss";
 import { sliderData } from "./Data";
+import { Outlet, Link } from "react-router-dom";
 const Carrousel = () => {
   const slideLength = sliderData.length;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -63,7 +64,9 @@ const Carrousel = () => {
                   <p>{slide.desc}</p>
                   <hr />
                   <button className={`--btn ${slide.btnClassName}`}>
-                    {slide.button}
+                    <Link to={slide.link} className="-btn-link">
+                      {slide.button}
+                    </Link>
                   </button>
                 </div>
               </div>

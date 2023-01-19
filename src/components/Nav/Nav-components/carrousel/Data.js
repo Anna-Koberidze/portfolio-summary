@@ -6,6 +6,7 @@ export const sliderData = [
     button: "Get started",
     btnClassName: "-start",
     cntClassName: "-welcome",
+    link: "/",
   },
   {
     image: "/images/image-2.jpg",
@@ -14,6 +15,7 @@ export const sliderData = [
     button: "resume",
     btnClassName: "-resume",
     cntClassName: "-my-resume",
+    link: "/Resume",
   },
   {
     image: "/images/image-3.jpg",
@@ -22,6 +24,7 @@ export const sliderData = [
     button: "projects",
     btnClassName: "-projects",
     cntClassName: "-my-projects",
+    link: "/Projects",
   },
   {
     image: "/images/image-4.jpg",
@@ -30,6 +33,7 @@ export const sliderData = [
     button: "contact",
     btnClassName: "-contact",
     cntClassName: "-my-contacts",
+    link: "/Contact",
   },
 ];
 export default sliderData;
