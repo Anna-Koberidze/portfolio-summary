@@ -64,9 +64,16 @@ const Carrousel = () => {
                   <p>{slide.desc}</p>
                   <hr />
                   <button className={`--btn ${slide.btnClassName}`}>
-                    <Link to={slide.link} className="-btn-link">
-                      {slide.button}
-                    </Link>
+                    {slide.insideLink ? (
+                      <a href={slide.insideLink} className="-btn-link">
+                        {" "}
+                        {slide.button}
+                      </a>
+                    ) : (
+                      <Link to={slide.link} className="-btn-link">
+                        {slide.button}
+                      </Link>
+                    )}
                   </button>
                 </div>
               </div>

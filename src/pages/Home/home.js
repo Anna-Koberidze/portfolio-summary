@@ -4,7 +4,9 @@ const Home = () => {
   return (
     <div>
       <Carrousel />
+
       <Header />
+      <section id="--section1"></section>
     </div>
   );
 };
