@@ -19,7 +19,6 @@
 nav {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
   &:hover {
     background-color: var(--color-tertiary);
     .layout-link {
@@ -28,7 +27,6 @@ nav {
   }
   div {
     margin: 20px 0px;
-    padding: 10px 10px 10px 30px;
     border-left-style: solid;
     border-color: var(--border-color);
     .layout-link {
@@ -45,4 +43,8 @@ nav {
 
 .first-layout-div {
   border-left-style: none;
+}
+.layout-link {
+  display: inline-block;
+  padding: 25px;
 }
