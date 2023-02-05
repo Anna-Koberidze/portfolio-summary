@@ -6,6 +6,11 @@ const Home = () => {
       <Carrousel />
 
       <Header />
+      <Header />
+      <Header />
+      <Header />
+      <Header />
+      <Header />
       <section id="--section1"></section>
     </div>
   );

@@ -29,6 +29,7 @@
   overflow: hidden;
   height: 100%;
 }
+
 .content {
   visibility: hidden;
   position: absolute;
@@ -42,6 +43,9 @@
   z-index: 5;
   top: 50%;
   transform: translateY(0);
+}
+.-btn-link {
+  behavior: smooth;
 }
 
 .--btn {
