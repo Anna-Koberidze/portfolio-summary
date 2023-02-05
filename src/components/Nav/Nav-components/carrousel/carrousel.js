@@ -66,7 +66,6 @@ const Carrousel = () => {
                   <button className={`--btn ${slide.btnClassName}`}>
                     {slide.insideLink ? (
                       <a href={slide.insideLink} className="-btn-link">
-                        {" "}
                         {slide.button}
                       </a>
                     ) : (

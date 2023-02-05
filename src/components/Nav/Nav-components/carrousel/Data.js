@@ -7,7 +7,7 @@ export const sliderData = [
     btnClassName: "-start",
     cntClassName: "-welcome",
     link: "/",
-    insideLink: "#--section",
+    insideLink: "#--section1",
   },
   {
     image: "/images/image-2.jpg",
