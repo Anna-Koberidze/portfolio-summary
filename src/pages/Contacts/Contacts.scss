@@ -1,0 +1,36 @@
+.gmail,
+.mobile,
+.location,
+.linkedin {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  padding: 40px;
+  border-bottom: solid #ff585f 0.5px;
+}
+.linkedin-link {
+  color: #ff585f;
+  text-decoration: none;
+  transition: 1s;
+  &:hover {
+    color: #39b385;
+  }
+}
+.contact-h1 {
+  color: #ff585f;
+  font-size: xx-large;
+  font-weight: 600;
+}
+.div-body {
+  display: flex;
+}
+.contact-info {
+  height: fit-content;
+}
+.contacts-img {
+  height: fit-content;
+}
+label {
+  color: #fd424b;
+  font-weight: 600;
+}

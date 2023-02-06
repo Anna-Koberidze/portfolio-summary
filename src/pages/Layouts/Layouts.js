@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import "./layouts.scss";
+import "../Contacts/Contacts.scss";
 const Layout = () => {
   return (
     <>
