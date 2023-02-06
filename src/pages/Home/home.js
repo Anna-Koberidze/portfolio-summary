@@ -5,13 +5,13 @@ const Home = () => {
     <div>
       <Carrousel />
 
+      {/* <Header />
       <Header />
       <Header />
       <Header />
       <Header />
       <Header />
-      <Header />
-      <section id="--section1"></section>
+      <section id="--section1"></section> */}
     </div>
   );
 };
