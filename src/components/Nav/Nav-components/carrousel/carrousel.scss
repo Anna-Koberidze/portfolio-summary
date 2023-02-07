@@ -156,15 +156,14 @@ img {
     height: 100%;
   }
 }
+@media screen and (max-width: 1000px) {
+  .indicators {
+    top: 350px;
+  }
+}
 @media screen and (max-width: 700px) {
-  .carousel-item {
-    width: 80%;
-  }
-  .carrousel {
-    width: 80%;
-  }
-  .carrousel-container {
-    width: 80%;
+  .indicators {
+    top: 200px;
   }
 }
 
