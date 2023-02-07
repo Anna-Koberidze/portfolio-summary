@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header-1">
-      <h1 className="greeting">Hello, I'm Anna. Nice to meet you.</h1>
+      <h1 className="greeting">
+        Hello, I'm Anna,<br></br> I'm a Junior front-end developer. <br></br>
+        Nice to meet you.
+      </h1>
       <img
         className="header-photo"
         alt="photo illustration"
