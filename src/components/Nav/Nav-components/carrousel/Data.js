@@ -2,7 +2,7 @@ export const sliderData = [
   {
     image: "/images/image-1.jpg",
     heading: "Welcome",
-    desc: "Welcome to my portfolio page",
+    desc: "Hello and Welcome to my portfolio page",
     button: "Get started",
     btnClassName: "-start",
     cntClassName: "-welcome",
@@ -12,7 +12,7 @@ export const sliderData = [
   {
     image: "/images/image-2.jpg",
     heading: "My Resume",
-    desc: "lorem ipsum dolor",
+    desc: "Click bellow to take a look at my resume",
     button: "Resume",
     btnClassName: "-resume",
     cntClassName: "-my-resume",
@@ -21,7 +21,7 @@ export const sliderData = [
   {
     image: "/images/image-3.jpg",
     heading: "My projects",
-    desc: "lorem ipsum dolor",
+    desc: "button bellow will take you to the showcase of my projects",
     button: "Projects",
     btnClassName: "-projects",
     cntClassName: "-my-projects",
@@ -30,7 +30,7 @@ export const sliderData = [
   {
     image: "/images/image-4.jpg",
     heading: "contact",
-    desc: "lorem ipsum dolor",
+    desc: "Click bellow to see my contact information",
     button: "Contact",
     btnClassName: "-contact",
     cntClassName: "-my-contacts",
