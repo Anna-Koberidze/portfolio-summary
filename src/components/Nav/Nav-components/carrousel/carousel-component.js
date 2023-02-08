@@ -10,10 +10,10 @@ import "./Carousel.scss";
 import { Link } from "react-router-dom";
 const Carousel = () => {
   return (
-    <CCarousel controls indicators interval="3000" pause="false" touch>
-      <CCarouselItem className="--carousel-item">
+    <CCarousel controls indicators interval={4000} pause="hover" touch>
+      <CCarouselItem className="--carousel-item" interval={1200}>
         <CImage
-          className="d-block w-100"
+          className="d-block w-100 carouselImage"
           src={sliderData[0].image}
           alt="slide 1"
         />
@@ -27,9 +27,9 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem className="--carousel-item">
+      <CCarouselItem className="--carousel-item" interval={4000}>
         <CImage
-          className="d-block w-100"
+          className="d-block w-100 carouselImage"
           src={sliderData[1].image}
           alt="slide 2"
         />
@@ -43,9 +43,9 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem className="--carousel-item">
+      <CCarouselItem className="--carousel-item" interval={4000}>
         <CImage
-          className="d-block w-100"
+          className="d-block w-100 carouselImage"
           src={sliderData[2].image}
           alt="slide 3"
         />
@@ -59,9 +59,9 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem className="--carousel-item">
+      <CCarouselItem className="--carousel-item" interval={4000}>
         <CImage
-          className="d-block w-100"
+          className="d-block w-100 carouselImage"
           src={sliderData[3].image}
           alt="slide 4"
         />

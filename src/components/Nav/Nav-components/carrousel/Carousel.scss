@@ -24,6 +24,9 @@
   background-color: var(--background-content);
   border-radius: 10px;
 }
+.carouselImage {
+  object-fit: cover;
+}
 .--btn {
   cursor: pointer;
   color: var(--white-content);
