@@ -25,7 +25,12 @@ function Header() {
         alt="photo illustration"
         src="/images/undraw_Blooming_re_2kc4.png"
       />
-      <div data-aos="zoom-in" className="introduction">
+      <div
+        data-aos="fade-right"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="2000"
+        className="introduction"
+      >
         Since the beginning of my journey as front-end developer I endeavor to
         learn everything I can get my hands on and become proficient in the
         field of web developement. <br></br>

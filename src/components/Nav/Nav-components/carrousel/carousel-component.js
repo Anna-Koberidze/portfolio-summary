@@ -10,7 +10,7 @@ import "./Carousel.scss";
 import { Link } from "react-router-dom";
 const Carousel = () => {
   return (
-    <CCarousel controls indicators interval="true" pause="true">
+    <CCarousel controls indicators interval="3000" pause="false" touch>
       <CCarouselItem interval="3000" className="--carousel-item">
         <CImage
           className="d-block w-100"
