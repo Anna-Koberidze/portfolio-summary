@@ -1,0 +1,84 @@
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --background-content: rgba(0, 0, 0, 0.3);
+  --white-content: #f3f3f3;
+  --border-color: #ddd;
+  --nav-background: rgba(255, 255, 255, 0.95);
+  --icons-grey: #b9b9b9;
+}
+.d-block {
+  height: 85vh;
+}
+
+.background-class {
+  background-color: var(--background-content);
+  border-radius: 10px;
+}
+.--btn {
+  cursor: pointer;
+  color: var(--white-content);
+  background: var(--color-tertiary);
+  border: var(--white-content);
+  size: 30px;
+  font-weight: 600;
+  z-index: 2;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.342);
+  transition: 300ms;
+
+  &:hover {
+    background: var(--white-content);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
+    .-btn-link {
+      color: var(--color-tertiary);
+    }
+  }
+  .-btn-link {
+    color: var(--white-content);
+    text-decoration: none;
+  }
+}
+
+$carousel-control-color: var(--white-content);
+$carousel-control-width: 15%;
+$carousel-control-opacity: 0.5;
+$carousel-control-hover-opacity: 0.9;
+$carousel-control-transition: opacity 0.15s ease;
+
+$carousel-indicator-width: 5px;
+$carousel-indicator-height: 3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer: 3px;
+$carousel-indicator-opacity: 0.5;
+$carousel-indicator-active-bg: var(--white-content);
+$carousel-indicator-active-opacity: 1;
+$carousel-indicator-transition: opacity 0.6s ease;
+
+$carousel-caption-width: 70%;
+$carousel-caption-color: var(--icons-grey);
+$carousel-caption-padding-y: 1.25rem;
+$carousel-caption-spacer: 1.25rem;
+
+$carousel-control-icon-width: 2rem;
+
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+
+$carousel-transition-duration: 0.6s;
+$carousel-transition: transform 2s ease, 0.5s ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+$carousel-dark-indicator-active-bg: var(--background-content);
+$carousel-dark-caption-color: var(--color-tertiary-darker);
+$carousel-dark-control-icon-filter: invert(1) grayscale(100);

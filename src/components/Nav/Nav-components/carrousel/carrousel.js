@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import "./carrousel.scss";
+// import "./carrousel.scss";
 import { sliderData } from "./Data";
 import { Outlet, Link } from "react-router-dom";
 const Carrousel = () => {
