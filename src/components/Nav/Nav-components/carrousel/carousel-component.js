@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Carousel = () => {
   return (
     <CCarousel controls indicators interval="3000" pause="false" touch>
-      <CCarouselItem interval="3000" className="--carousel-item">
+      <CCarouselItem className="--carousel-item">
         <CImage
           className="d-block w-100"
           src={sliderData[0].image}
@@ -27,7 +27,7 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem interval="3000" className="--carousel-item">
+      <CCarouselItem className="--carousel-item">
         <CImage
           className="d-block w-100"
           src={sliderData[1].image}
@@ -43,7 +43,7 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem interval="3000" className="--carousel-item">
+      <CCarouselItem className="--carousel-item">
         <CImage
           className="d-block w-100"
           src={sliderData[2].image}
@@ -59,7 +59,7 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem interval="3000" className="--carousel-item">
+      <CCarouselItem className="--carousel-item">
         <CImage
           className="d-block w-100"
           src={sliderData[3].image}
