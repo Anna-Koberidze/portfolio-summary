@@ -16,42 +16,189 @@
   --nav-background: rgba(255, 255, 255, 0.95);
   --icons-grey: #b9b9b9;
 }
-nav {
+.navigation-bar-container-initial {
   display: flex;
   justify-content: flex-end;
-  position: sticky;
+  flex-direction: row;
   top: 0;
   z-index: 5;
   background-color: var(--white-content);
   transition: 1s;
+  position: sticky;
+  width: 100%;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
 
+    div {
+      border-color: var(--border-color);
+      border-left-style: solid;
+    }
+  }
   &:hover {
     background-color: var(--color-tertiary);
-    .layout-link {
-      color: var(--icons-grey);
-    }
-  }
-  div {
-    margin: 5px 0px;
-    border-left-style: solid;
-    border-color: var(--border-color);
-    .layout-link {
-      color: var(--color-tertiary-darker);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    &:hover {
-      .layout-link {
-        color: var(--white-content);
-      }
+    .layout-link-initial {
+      color: white;
     }
   }
 }
 
-.first-layout-div {
-  border-left-style: none;
+.navigation-bar-container-blueTheme {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white-content);
+  transition: 1s;
+  position: sticky;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    div {
+      border-color: var(--border-color);
+      border-left-style: solid;
+    }
+  }
+  &:hover {
+    background-color: var(--color-primary);
+    .layout-link-blueTheme {
+      color: white;
+    }
+  }
 }
-.layout-link {
+.navigation-bar-container-goldTheme {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white-content);
+  transition: 1s;
+  position: sticky;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    div {
+      border-color: var(--border-color);
+      border-left-style: solid;
+    }
+  }
+  &:hover {
+    background-color: var(--color-secondary);
+    .layout-link-goldTheme {
+      color: white;
+    }
+  }
+}
+
+.navigation-bar-container-pinkTheme {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white-content);
+  transition: 1s;
+  position: sticky;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    div {
+      border-color: var(--border-color);
+      border-left-style: solid;
+    }
+  }
+  &:hover {
+    background-color: palevioletred;
+    .layout-link-pinkTheme {
+      color: white;
+    }
+  }
+}
+
+//in case of redux not working
+// .navigation-bar-container {
+//   display: flex;
+//   justify-content: flex-end;
+//   flex-direction: row;
+//   top: 0;
+//   z-index: 5;
+//   background-color: var(--white-content);
+//   transition: 1s;
+//   position: sticky;
+//   nav {
+//     display: flex;
+//     justify-content: flex-end;
+//     flex-direction: row;
+//   }
+//   &:hover {
+//     background-color: var(--color-tertiary);
+//     .layout-link {
+//       color: white;
+//     }
+//   }
+// }
+
+.layout-link-initial {
+  color: var(--color-tertiary-darker);
+  text-decoration: none;
+  font-weight: 500;
   display: inline-block;
   padding: 25px;
+
+  &:hover {
+    .layout-link-initial {
+      color: var(--white-content);
+    }
+  }
 }
+.layout-link-blueTheme {
+  color: var(--color-primary-darker);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  padding: 25px;
+
+  &:hover {
+    .layout-link-initial {
+      color: var(--white-content);
+    }
+  }
+}
+.layout-link-goldTheme {
+  color: var(--color-secondary-darker);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  padding: 25px;
+
+  &:hover {
+    .layout-link-initial {
+      color: var(--white-content);
+    }
+  }
+}
+.layout-link-pinkTheme {
+  color: rebeccapurple;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  padding: 25px;
+
+  &:hover {
+    .layout-link-initial {
+      color: var(--white-content);
+    }
+  }
+}
+
+// @media screen and (max-width: 800px) {
+//   nav {
+//     display: none;
+//   }
+// }
