@@ -16,17 +16,17 @@
   --nav-background: rgba(255, 255, 255, 0.95);
   --icons-grey: #b9b9b9;
 }
-.navigation-bar-container-initial {
+.navigation-bar-container {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   top: 0;
   z-index: 5;
-  background-color: var(--white-content);
   transition: 1s;
   position: sticky;
   width: 100%;
   nav {
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -34,34 +34,13 @@
     div {
       border-color: var(--border-color);
       border-left-style: solid;
-    }
-  }
-  &:hover {
-    background-color: var(--color-tertiary);
-    .layout-link-initial {
-      color: white;
     }
   }
 }
 
-.navigation-bar-container-blueTheme {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  top: 0;
-  z-index: 5;
+.blueTheme {
   background-color: var(--white-content);
-  transition: 1s;
-  position: sticky;
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    div {
-      border-color: var(--border-color);
-      border-left-style: solid;
-    }
-  }
+
   &:hover {
     background-color: var(--color-primary);
     .layout-link-blueTheme {
@@ -69,24 +48,8 @@
     }
   }
 }
-.navigation-bar-container-goldTheme {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  top: 0;
-  z-index: 5;
+.goldTheme {
   background-color: var(--white-content);
-  transition: 1s;
-  position: sticky;
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    div {
-      border-color: var(--border-color);
-      border-left-style: solid;
-    }
-  }
   &:hover {
     background-color: var(--color-secondary);
     .layout-link-goldTheme {
@@ -95,24 +58,9 @@
   }
 }
 
-.navigation-bar-container-pinkTheme {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  top: 0;
-  z-index: 5;
+.pinkTheme {
   background-color: var(--white-content);
-  transition: 1s;
-  position: sticky;
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    div {
-      border-color: var(--border-color);
-      border-left-style: solid;
-    }
-  }
+
   &:hover {
     background-color: palevioletred;
     .layout-link-pinkTheme {
@@ -121,28 +69,15 @@
   }
 }
 
-//in case of redux not working
-// .navigation-bar-container {
-//   display: flex;
-//   justify-content: flex-end;
-//   flex-direction: row;
-//   top: 0;
-//   z-index: 5;
-//   background-color: var(--white-content);
-//   transition: 1s;
-//   position: sticky;
-//   nav {
-//     display: flex;
-//     justify-content: flex-end;
-//     flex-direction: row;
-//   }
-//   &:hover {
-//     background-color: var(--color-tertiary);
-//     .layout-link {
-//       color: white;
-//     }
-//   }
-// }
+.initial {
+  background-color: var(--white-content);
+  &:hover {
+    background-color: var(--color-tertiary);
+    .layout-link-initial {
+      color: white;
+    }
+  }
+}
 
 .layout-link-initial {
   color: var(--color-tertiary-darker);

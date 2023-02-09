@@ -34,7 +34,7 @@ const Layout = () => {
   return (
     <>
       <div
-        className={`navigation-bar-container-${
+        className={`navigation-bar-container ${
           navContainerClassName ? navContainerClassName : ""
         }`}
       >

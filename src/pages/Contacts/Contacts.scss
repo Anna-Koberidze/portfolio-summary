@@ -29,7 +29,8 @@
   height: fit-content;
 }
 .contacts-img {
-  height: fit-content;
+  max-width: 100%;
+  object-fit: cover;
 }
 label {
   color: #fd424b;
