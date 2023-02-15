@@ -28,9 +28,9 @@
   color: var(--color-tertiary);
   font-size: 85px;
   font-weight: 100;
+  max-width: 60%;
 }
 .introduction {
-  width: 700px;
   text-align: center;
   margin: 10px;
   color: var(--color-tertiary-darker);
@@ -42,8 +42,8 @@
 }
 
 @media screen and (max-width: 700px) {
-  .introduction {
-    max-width: 450px;
+  .greeting {
+    max-width: 80%;
   }
 }
 .--next-button {

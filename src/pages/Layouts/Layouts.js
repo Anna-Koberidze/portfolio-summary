@@ -53,25 +53,34 @@ const Layout = () => {
           </button>
         </div>
         <nav>
-          <div className="first-layout-div">
-            <Link to="/" className={`layout-link-${linkClassName}`}>
+          <div>
+            <Link to="/" className={`layout-link-${linkClassName} indHover`}>
               Home
             </Link>
           </div>
 
           <div>
-            <Link to="/Resume" className={`layout-link-${linkClassName}`}>
+            <Link
+              to="/Resume"
+              className={`layout-link-${linkClassName} indHover`}
+            >
               Resume
             </Link>
           </div>
           <div>
-            <Link to="/Projects" className={`layout-link-${linkClassName}`}>
+            <Link
+              to="/Projects"
+              className={`layout-link-${linkClassName} indHover`}
+            >
               Projects
             </Link>
           </div>
 
           <div>
-            <Link to="/Contact" className={`layout-link-${linkClassName}`}>
+            <Link
+              to="/Contact"
+              className={`layout-link-${linkClassName} indHover`}
+            >
               Contact
             </Link>
           </div>

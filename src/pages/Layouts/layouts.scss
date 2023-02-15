@@ -43,18 +43,12 @@
 
   &:hover {
     background-color: var(--color-primary);
-    .layout-link-blueTheme {
-      color: white;
-    }
   }
 }
 .goldTheme {
   background-color: var(--white-content);
   &:hover {
     background-color: var(--color-secondary);
-    .layout-link-goldTheme {
-      color: white;
-    }
   }
 }
 
@@ -63,9 +57,6 @@
 
   &:hover {
     background-color: palevioletred;
-    .layout-link-pinkTheme {
-      color: white;
-    }
   }
 }
 
@@ -73,9 +64,6 @@
   background-color: var(--white-content);
   &:hover {
     background-color: var(--color-tertiary);
-    .layout-link-initial {
-      color: white;
-    }
   }
 }
 
@@ -85,12 +73,6 @@
   font-weight: 500;
   display: inline-block;
   padding: 25px;
-
-  &:hover {
-    .layout-link-initial {
-      color: var(--white-content);
-    }
-  }
 }
 .layout-link-blueTheme {
   color: var(--color-primary-darker);
@@ -98,12 +80,6 @@
   font-weight: 500;
   display: inline-block;
   padding: 25px;
-
-  &:hover {
-    .layout-link-initial {
-      color: var(--white-content);
-    }
-  }
 }
 .layout-link-goldTheme {
   color: var(--color-secondary-darker);
@@ -111,12 +87,6 @@
   font-weight: 500;
   display: inline-block;
   padding: 25px;
-
-  &:hover {
-    .layout-link-initial {
-      color: var(--white-content);
-    }
-  }
 }
 .layout-link-pinkTheme {
   color: rebeccapurple;
@@ -124,14 +94,21 @@
   font-weight: 500;
   display: inline-block;
   padding: 25px;
-
+}
+nav {
   &:hover {
-    .layout-link-initial {
-      color: var(--white-content);
+    .indHover {
+      color: var(--border-color);
+    }
+  }
+  div {
+    &:hover {
+      .indHover {
+        color: var(--white-content);
+      }
     }
   }
 }
-
 // @media screen and (max-width: 800px) {
 //   nav {
 //     display: none;

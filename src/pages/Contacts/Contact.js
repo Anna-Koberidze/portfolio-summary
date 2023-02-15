@@ -25,6 +25,10 @@ const Contact = () => {
             LinkedIn Profile
           </a>
         </section>
+        <section className="working-state">
+          <label>Open to work</label>
+          <p>Remotely / On-site</p>
+        </section>
       </section>
       <section className="photo-contacts">
         <img
