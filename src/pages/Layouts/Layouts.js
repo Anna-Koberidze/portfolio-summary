@@ -8,6 +8,7 @@ import {
   setGold,
   setPink,
 } from "../../store/reducers/themeSlice";
+import { useState } from "react";
 const Layout = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.theme);
@@ -31,28 +32,70 @@ const Layout = () => {
       linkClassName = "pinkTheme";
       break;
   }
+  const [hidden, toggleHidden] = useState(true);
+  const changeHidden = () => {
+    toggleHidden((hidden) => !hidden);
+  };
   return (
     <>
-      <div
-        className={`navigation-bar-container ${
-          navContainerClassName ? navContainerClassName : ""
-        }`}
-      >
-        <div className="theme-chooser">
-          <button className="initial" onClick={() => dispatch(setInitial())}>
-            initial
-          </button>
-          <button className="blue" onClick={() => dispatch(setBlue())}>
-            blue
-          </button>
-          <button className="gold" onClick={() => dispatch(setGold())}>
-            gold
-          </button>
-          <button className="pink" onClick={() => dispatch(setPink())}>
-            pink
-          </button>
+      <div className="navigation">
+        <div
+          className={`navigation-bar-container ${
+            navContainerClassName ? navContainerClassName : ""
+          }`}
+        >
+          <div className="theme-chooser">
+            <button className="initial" onClick={() => dispatch(setInitial())}>
+              initial
+            </button>
+            <button className="blue" onClick={() => dispatch(setBlue())}>
+              blue
+            </button>
+            <button className="gold" onClick={() => dispatch(setGold())}>
+              gold
+            </button>
+            <button className="pink" onClick={() => dispatch(setPink())}>
+              pink
+            </button>
+          </div>
+          <nav>
+            <div>
+              <Link to="/" className={`layout-link-${linkClassName} indHover`}>
+                Home
+              </Link>
+            </div>
+
+            <div>
+              <Link
+                to="/Resume"
+                className={`layout-link-${linkClassName} indHover`}
+              >
+                Resume
+              </Link>
+            </div>
+            <div>
+              <Link
+                to="/Projects"
+                className={`layout-link-${linkClassName} indHover`}
+              >
+                Projects
+              </Link>
+            </div>
+
+            <div>
+              <Link
+                to="/Contact"
+                className={`layout-link-${linkClassName} indHover`}
+              >
+                Contact
+              </Link>
+            </div>
+          </nav>
+          <div className="hamburger" onCLick={changeHidden}></div>
         </div>
-        <nav>
+        <div
+          className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : null}`}
+        >
           <div>
             <Link to="/" className={`layout-link-${linkClassName} indHover`}>
               Home
@@ -84,7 +127,7 @@ const Layout = () => {
               Contact
             </Link>
           </div>
-        </nav>
+        </div>
       </div>
 
       <Outlet />
