@@ -33,7 +33,7 @@ const Layout = () => {
       linkClassName = "pinkTheme";
       break;
   }
-  const [hidden, toggleHidden] = useState(false);
+  const [hidden, toggleHidden] = useState(true);
 
   const changeHidden = () => {
     toggleHidden((hidden) => !hidden);
