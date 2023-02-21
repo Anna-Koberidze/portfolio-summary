@@ -8,7 +8,7 @@ import {
   setGold,
   setPink,
 } from "../../store/reducers/themeSlice";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Layout = () => {
   const dispatch = useDispatch();
@@ -32,8 +32,12 @@ const Layout = () => {
       navContainerClassName = "pinkTheme";
       linkClassName = "pinkTheme";
       break;
+    default:
+      navContainerClassName = "";
+      linkClassName = "";
+      break;
   }
-  const [hidden, toggleHidden] = useState(true);
+  const [hidden, toggleHidden] = useState(false);
 
   const changeHidden = () => {
     toggleHidden((hidden) => !hidden);
@@ -96,12 +100,13 @@ const Layout = () => {
           </nav>
         </div>
         <div className="small-screen">
-          <div className="hamburger" onCLick={changeHidden}>
+          <div className="hamburger" onClick={changeHidden}>
             hamburger menue coming soon
           </div>
           <div
             className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}
           >
+            <div className="flex-sidebar-override"></div>
             <div>
               <Link to="/" className={`layout-link-${linkClassName} indHover`}>
                 Home
