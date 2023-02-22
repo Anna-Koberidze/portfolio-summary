@@ -45,99 +45,111 @@ const Layout = () => {
 
   return (
     <>
-      <div className="navigation">
-        <div
-          className={`navigation-bar-container ${
-            navContainerClassName ? navContainerClassName : ""
-          }`}
-        >
-          <div className="theme-chooser">
-            <button className="initial" onClick={() => dispatch(setInitial())}>
-              initial
-            </button>
-            <button className="blue" onClick={() => dispatch(setBlue())}>
-              blue
-            </button>
-            <button className="gold" onClick={() => dispatch(setGold())}>
-              gold
-            </button>
-            <button className="pink" onClick={() => dispatch(setPink())}>
-              pink
-            </button>
+      <div
+        className={`navigation-bar-container ${
+          navContainerClassName ? navContainerClassName : ""
+        }`}
+      >
+        <div className="theme-chooser">
+          <button className={`theme-button ${linkClassName}-b`}></button>
+          <div className="no-display">
+            <div className="dropdown-content">
+              <button
+                className="initial"
+                onClick={() => dispatch(setInitial())}
+              >
+                initial
+              </button>
+              <button className="blue" onClick={() => dispatch(setBlue())}>
+                blue
+              </button>
+              <button className="gold" onClick={() => dispatch(setGold())}>
+                gold
+              </button>
+              <button className="pink" onClick={() => dispatch(setPink())}>
+                pink
+              </button>
+            </div>
           </div>
-          <nav className="big-screen">
-            <div>
-              <Link to="/" className={`layout-link-${linkClassName} indHover`}>
-                Home
-              </Link>
-            </div>
-
-            <div>
-              <Link
-                to="/Resume"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Resume
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/Projects"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Projects
-              </Link>
-            </div>
-
-            <div>
-              <Link
-                to="/Contact"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Contact
-              </Link>
-            </div>
-          </nav>
         </div>
-        <div className="small-screen">
-          <div className="hamburger" onClick={changeHidden}>
-            hamburger menue coming soon
+        <nav className="big-screen">
+          <div>
+            <Link to="/" className={`layout-link-${linkClassName} indHover`}>
+              Home
+            </Link>
           </div>
-          <div
-            className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}
+
+          <div>
+            <Link
+              to="/Resume"
+              className={`layout-link-${linkClassName} indHover`}
+            >
+              Resume
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/Projects"
+              className={`layout-link-${linkClassName} indHover`}
+            >
+              Projects
+            </Link>
+          </div>
+
+          <div>
+            <Link
+              to="/Contact"
+              className={`layout-link-${linkClassName} indHover`}
+            >
+              Contact
+            </Link>
+          </div>
+        </nav>
+      </div>
+      <div className="nav-display-override">
+        <nav className="mobile-nav">
+          <button
+            className={`hamburger ${hidden ? "closed" : "open"}`}
+            onClick={changeHidden}
           >
-            <div className="flex-sidebar-override"></div>
-            <div>
-              <Link to="/" className={`layout-link-${linkClassName} indHover`}>
-                Home
-              </Link>
-            </div>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+          </button>
+        </nav>
+      </div>
+      <div className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}>
+        <div className="flex-sidebar-override">
+          <div>
+            <Link to="/" className={`layout-link-${linkClassName} indHover`}>
+              Home
+            </Link>
+          </div>
 
-            <div>
-              <Link
-                to="/Resume"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Resume
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/Projects"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Projects
-              </Link>
-            </div>
+          <div>
+            <Link
+              to="/Resume"
+              className={`layout-link-${linkClassName} indHover`}
+            >
+              Resume
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/Projects"
+              className={`layout-link-${linkClassName} indHover`}
+            >
+              Projects
+            </Link>
+          </div>
 
-            <div>
-              <Link
-                to="/Contact"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Contact
-              </Link>
-            </div>
+          <div>
+            <Link
+              to="/Contact"
+              className={`layout-link-${linkClassName} indHover`}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
