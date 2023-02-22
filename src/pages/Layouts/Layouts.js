@@ -8,7 +8,7 @@ import {
   setGold,
   setPink,
 } from "../../store/reducers/themeSlice";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Layout = () => {
   const dispatch = useDispatch();
@@ -37,11 +37,28 @@ const Layout = () => {
       linkClassName = "";
       break;
   }
-  const [hidden, toggleHidden] = useState(false);
-
+  const [hidden, toggleHidden] = useState(true);
+  const [disabled, setDisabled] = useState(false);
   const changeHidden = () => {
-    toggleHidden((hidden) => !hidden);
+    if (hidden === true) {
+      toggleHidden(false);
+    }
   };
+  useEffect(() => {
+    if (hidden === false) {
+      document.addEventListener("mousedown", sabasFunqcia);
+      setDisabled(true);
+    }
+    function sabasFunqcia(event) {
+      console.log(hidden);
+      if (hidden === false) {
+        console.log(event.target);
+        toggleHidden(true);
+
+        return () => document.removeEventListener("mousedown", sabasFunqcia);
+      }
+    }
+  }, [hidden]);
 
   return (
     <>
@@ -55,20 +72,21 @@ const Layout = () => {
           <div className="no-display">
             <div className="dropdown-content">
               <button
-                className="initial"
+                className="initial-btn"
                 onClick={() => dispatch(setInitial())}
-              >
-                initial
-              </button>
-              <button className="blue" onClick={() => dispatch(setBlue())}>
-                blue
-              </button>
-              <button className="gold" onClick={() => dispatch(setGold())}>
-                gold
-              </button>
-              <button className="pink" onClick={() => dispatch(setPink())}>
-                pink
-              </button>
+              ></button>
+              <button
+                className="blue"
+                onClick={() => dispatch(setBlue())}
+              ></button>
+              <button
+                className="gold"
+                onClick={() => dispatch(setGold())}
+              ></button>
+              <button
+                className="pink"
+                onClick={() => dispatch(setPink())}
+              ></button>
             </div>
           </div>
         </div>
@@ -106,10 +124,12 @@ const Layout = () => {
           </div>
         </nav>
       </div>
+
       <div className="nav-display-override">
         <nav className="mobile-nav">
           <button
             className={`hamburger ${hidden ? "closed" : "open"}`}
+            disabled={disabled}
             onClick={changeHidden}
           >
             <span className="burger-line"></span>
