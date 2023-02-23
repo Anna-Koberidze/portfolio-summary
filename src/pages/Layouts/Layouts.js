@@ -39,27 +39,26 @@ const Layout = () => {
   }
   const [hidden, toggleHidden] = useState(true);
   const [disabled, setDisabled] = useState(false);
+
+  const sideNavRef = useRef(null);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOut);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOut);
+    };
+  }, [sideNavRef]);
   const changeHidden = () => {
     if (hidden === true) {
       toggleHidden(false);
-    }
-  };
-  useEffect(() => {
-    if (hidden === false) {
-      document.addEventListener("mousedown", sabasFunqcia);
       setDisabled(true);
     }
-    function sabasFunqcia(event) {
-      console.log(hidden);
-      if (hidden === false) {
-        console.log(event.target);
-        toggleHidden(true);
-
-        return () => document.removeEventListener("mousedown", sabasFunqcia);
-      }
+  };
+  function handleClickOut(event) {
+    if (sideNavRef.current && !sideNavRef.current.contains(event.target)) {
+      setDisabled(false);
+      toggleHidden(true);
     }
-  }, [hidden]);
-
+  }
   return (
     <>
       <div
@@ -128,8 +127,9 @@ const Layout = () => {
       <div className="nav-display-override">
         <nav className="mobile-nav">
           <button
-            className={`hamburger ${hidden ? "closed" : "open"}`}
             disabled={disabled}
+            className={`hamburger ${hidden ? "closed" : "open"}`}
+            // disabled={disabled}
             onClick={changeHidden}
           >
             <span className="burger-line"></span>
@@ -138,7 +138,10 @@ const Layout = () => {
           </button>
         </nav>
       </div>
-      <div className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}>
+      <div
+        ref={sideNavRef}
+        className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}
+      >
         <div className="flex-sidebar-override">
           <div>
             <Link to="/" className={`layout-link-${linkClassName} indHover`}>

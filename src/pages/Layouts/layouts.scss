@@ -311,3 +311,7 @@
     background-color: darkmagenta;
   }
 }
+
+*:disabled {
+  pointer-events: none;
+}
