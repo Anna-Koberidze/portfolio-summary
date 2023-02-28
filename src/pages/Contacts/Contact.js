@@ -1,6 +1,26 @@
+import { useSelector } from "react-redux";
 const Contact = () => {
+  const theme = useSelector((state) => state.theme.theme);
+  let contactClass;
+  switch (theme) {
+    case 1:
+      contactClass = "initial-contact";
+      break;
+    case 2:
+      contactClass = "blue-contact";
+      break;
+    case 3:
+      contactClass = "gold-contact";
+      break;
+    case 4:
+      contactClass = "pink-contact";
+      break;
+    default:
+      contactClass = "";
+      break;
+  }
   return (
-    <div className="div-body">
+    <div className={`div-body ${contactClass}`}>
       <section className="contact-info">
         <h1 className="contact-h1">Contact Me</h1>
         <section className="gmail">

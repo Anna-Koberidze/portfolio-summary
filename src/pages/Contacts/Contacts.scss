@@ -1,39 +1,140 @@
-.gmail,
-.mobile,
-.location,
-.linkedin,
-.working-state {
-  display: flex;
-  justify-content: space-between;
-  width: 50vw;
-  padding: 40px;
-  border-bottom: solid #ff585f 0.5px;
-}
-.linkedin-link {
-  color: #ff585f;
-  text-decoration: none;
-  transition: 1s;
-  &:hover {
-    color: #39b385;
-  }
-}
-.contact-h1 {
-  color: #ff585f;
-  font-size: xx-large;
-  font-weight: 600;
-  margin: 20px;
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --background-content: rgba(0, 0, 0, 0.3);
+  --white-content: #f3f3f3;
+  --border-color: #ddd;
+  --nav-background: rgba(255, 255, 255, 0.95);
+  --icons-grey: #b9b9b9;
 }
 .div-body {
+  .gmail,
+  .mobile,
+  .location,
+  .linkedin,
+  .working-state {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    padding: 40px;
+  }
   display: flex;
+  .linkedin-link {
+    text-decoration: none;
+    transition: 1s;
+  }
+  .contact-h1 {
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 20px;
+  }
+  .contact-info {
+    height: fit-content;
+  }
+  .contacts-img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  label {
+    font-weight: 600;
+  }
 }
-.contact-info {
-  height: fit-content;
+.initial-contact {
+  .gmail,
+  .mobile,
+  .location,
+  .linkedin,
+  .working-state {
+    border-bottom: solid var(--color-tertiary) 0.5px;
+  }
+  .linkedin-link {
+    color: var(--color-tertiary);
+    &:hover {
+      color: var(--color-primary-darker);
+    }
+  }
+  .contact-h1 {
+    color: var(--color-tertiary-darker);
+  }
+
+  label {
+    color: var(--color-tertiary-darker);
+  }
 }
-.contacts-img {
-  max-width: 100%;
-  object-fit: cover;
+
+.blue-contact {
+  .gmail,
+  .mobile,
+  .location,
+  .linkedin,
+  .working-state {
+    border-bottom: solid var(--color-primary) 0.5px;
+  }
+  .linkedin-link {
+    color: var(--color-primary);
+    &:hover {
+      color: aqua;
+    }
+  }
+  .contact-h1 {
+    color: var(--color-primary-darker);
+  }
+  label {
+    color: var(--color-primary-darker);
+  }
 }
-label {
-  color: #fd424b;
-  font-weight: 600;
+
+.gold-contact {
+  .gmail,
+  .mobile,
+  .location,
+  .linkedin,
+  .working-state {
+    border-bottom: solid var(--color-secondary) 0.5px;
+  }
+
+  .linkedin-link {
+    color: var(--color-secondary-darker);
+    &:hover {
+      color: aqua;
+    }
+  }
+  .contact-h1 {
+    color: var(--color-secondary-darker);
+  }
+  label {
+    color: var(--color-secondary-darker);
+  }
+}
+
+.pink-contact {
+  .gmail,
+  .mobile,
+  .location,
+  .linkedin,
+  .working-state {
+    border-bottom: solid darkorchid 0.5px;
+  }
+  .linkedin-link {
+    color: darkorchid;
+    &:hover {
+      color: hotpink;
+    }
+  }
+  .contact-h1 {
+    color: darkorchid;
+  }
+
+  label {
+    color: darkorchid;
+  }
 }
