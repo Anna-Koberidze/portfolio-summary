@@ -39,7 +39,27 @@ const Layout = () => {
   }
   const [hidden, toggleHidden] = useState(true);
   const [disabled, setDisabled] = useState(false);
-
+  const [visible, setVisible] = useState(false);
+  const [disabledTheme, setDisabledTheme] = useState(false);
+  const themeRef = useRef(null);
+  const changeVisible = () => {
+    if (visible === false) {
+      setVisible(true);
+      setDisabledTheme(true);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
+  function handleClickOutside(event) {
+    if (themeRef.current && !themeRef.current.contains(event.target)) {
+      setDisabledTheme(false);
+      setVisible(false);
+    }
+  }
   const sideNavRef = useRef(null);
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOut);
@@ -66,27 +86,33 @@ const Layout = () => {
           navContainerClassName ? navContainerClassName : ""
         }`}
       >
-        <div className="theme-chooser">
-          <button className={`theme-button ${linkClassName}-b`}></button>
-          <div className="no-display">
-            <div className="dropdown-content">
-              <button
-                className="initial-btn"
-                onClick={() => dispatch(setInitial())}
-              ></button>
-              <button
-                className="blue"
-                onClick={() => dispatch(setBlue())}
-              ></button>
-              <button
-                className="gold"
-                onClick={() => dispatch(setGold())}
-              ></button>
-              <button
-                className="pink"
-                onClick={() => dispatch(setPink())}
-              ></button>
-            </div>
+        <div ref={themeRef} className="theme-chooser" onClick={changeVisible}>
+          <button
+            disabled={disabledTheme}
+            className={`theme-button ${linkClassName}-b`}
+          ></button>
+
+          <div
+            className={`dropdown-content ${
+              visible ? "visible" : "not-visible"
+            }`}
+          >
+            <button
+              className="initial-btn"
+              onClick={() => dispatch(setInitial())}
+            ></button>
+            <button
+              className="blue"
+              onClick={() => dispatch(setBlue())}
+            ></button>
+            <button
+              className="gold"
+              onClick={() => dispatch(setGold())}
+            ></button>
+            <button
+              className="pink"
+              onClick={() => dispatch(setPink())}
+            ></button>
           </div>
         </div>
         <nav className="big-screen">
