@@ -25,7 +25,7 @@
 .greeting {
   text-align: center;
   margin: 100px 0;
-  color: var(--color-tertiary);
+
   font-size: 85px;
   font-weight: 100;
   max-width: 60%;
@@ -33,7 +33,6 @@
 .introduction {
   text-align: center;
   margin: 10px;
-  color: var(--color-tertiary-darker);
   font-size: larger;
   font-size: 30px;
 }
@@ -48,8 +47,7 @@
 }
 .--next-button {
   cursor: pointer;
-  color: var(--white-content);
-  background: var(--color-tertiary);
+  background: white;
   border: var(--white-content);
   font-weight: 600;
   font-size: 20px;
@@ -65,12 +63,26 @@
     background: var(--icons-grey);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
     .--next-button-link {
-      color: var(--color-tertiary);
+      color: white;
     }
   }
   .--next-button-link {
     text-decoration: none;
-    color: var(--white-content);
+    color: var(--icons-grey);
     padding: 20px 10px;
   }
+}
+
+.initial-intro {
+  color: var(--color-tertiary-darker);
+}
+
+.blue-intro {
+  color: var(--color-primary-darker);
+}
+.gold-intro {
+  color: var(--color-secondary-darker);
+}
+.pink-intro {
+  color: darkorchid;
 }
