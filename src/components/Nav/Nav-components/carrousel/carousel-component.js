@@ -36,6 +36,7 @@ const Carousel = () => {
       break;
     default:
       sliderData = "";
+      btnClassName = "";
       break;
   }
   return (
