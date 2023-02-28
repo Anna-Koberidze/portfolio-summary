@@ -126,6 +126,29 @@ const Layout = () => {
 
       <div className="nav-display-override">
         <nav className="mobile-nav">
+          <div className="theme-chooser">
+            <button className={`theme-button-mob ${linkClassName}-b`}></button>
+            <div className="no-display">
+              <div className="dropdown-content">
+                <button
+                  className="initial-btn"
+                  onClick={() => dispatch(setInitial())}
+                ></button>
+                <button
+                  className="blue"
+                  onClick={() => dispatch(setBlue())}
+                ></button>
+                <button
+                  className="gold"
+                  onClick={() => dispatch(setGold())}
+                ></button>
+                <button
+                  className="pink"
+                  onClick={() => dispatch(setPink())}
+                ></button>
+              </div>
+            </div>
+          </div>
           <button
             disabled={disabled}
             className={`hamburger ${hidden ? "closed" : "open"}`}
