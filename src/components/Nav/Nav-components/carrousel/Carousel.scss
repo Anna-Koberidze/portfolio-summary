@@ -41,6 +41,14 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.342);
   transition: 300ms;
 
+  .-btn-link {
+    color: var(--white-content);
+    text-decoration: none;
+  }
+}
+.initial-btn-car {
+  background-color: var(--color-tertiary);
+
   &:hover {
     background: var(--white-content);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
@@ -48,8 +56,46 @@
       color: var(--color-tertiary);
     }
   }
-  .-btn-link {
-    color: var(--white-content);
-    text-decoration: none;
+}
+.blue-btn {
+  background-color: var(--color-primary);
+
+  &:hover {
+    background: var(--white-content);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
+    .-btn-link {
+      color: var(--color-primary-darker);
+    }
+  }
+}
+.gold-btn {
+  background-color: var(--color-secondary);
+
+  &:hover {
+    background: var(--white-content);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
+    .-btn-link {
+      color: var(--color-secondary-darker);
+    }
+  }
+}
+.pink-btn {
+  background-color: darkorchid;
+
+  &:hover {
+    background: var(--white-content);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
+    .-btn-link {
+      color: darkorchid;
+    }
+  }
+}
+
+.background-class {
+  h5 {
+    font-size: xx-large;
+  }
+  p {
+    font-size: large;
   }
 }
