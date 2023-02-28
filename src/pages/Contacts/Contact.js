@@ -2,18 +2,23 @@ import { useSelector } from "react-redux";
 const Contact = () => {
   const theme = useSelector((state) => state.theme.theme);
   let contactClass;
+  let imgSrcCon;
   switch (theme) {
     case 1:
       contactClass = "initial-contact";
+      imgSrcCon = "./images/profile-data.png";
       break;
     case 2:
       contactClass = "blue-contact";
+      imgSrcCon = "./images/undraw_Private_data_re_4eab.png";
       break;
     case 3:
       contactClass = "gold-contact";
+      imgSrcCon = "./images/undraw_My_documents_re_13dc.png";
       break;
     case 4:
       contactClass = "pink-contact";
+      imgSrcCon = "./images/undraw_Contact_us_re_4qqt.png";
       break;
     default:
       contactClass = "";
@@ -54,7 +59,7 @@ const Contact = () => {
         <img
           class="contacts-img"
           alt="illustration of contact information"
-          src="\images\profile-data.png"
+          src={imgSrcCon}
         />
       </section>
     </div>
