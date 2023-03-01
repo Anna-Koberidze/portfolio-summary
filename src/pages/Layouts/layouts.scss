@@ -45,6 +45,9 @@
   background-color: var(--white-content);
   &:hover {
     background-color: var(--color-primary);
+    .nav-wrap {
+      background-color: var(--color-primary);
+    }
     .indHover {
       color: var(--border-color);
     }
@@ -333,12 +336,24 @@
   pointer-events: none;
 }
 
-.theme-button-mob {
-  color: white;
-  margin: 12px;
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
+.hidden {
+  pointer-events: none;
+}
+
+.theme-chooser-mob {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .theme-button-mob {
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+  }
 }

@@ -42,18 +42,31 @@ const Layout = () => {
   const [visible, setVisible] = useState(false);
   const [disabledTheme, setDisabledTheme] = useState(false);
   const themeRef = useRef(null);
+  const themeRefMob = useRef(null);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [themeRef]);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutsideMob);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideMob);
+    };
+  }, [themeRefMob]);
   const changeVisible = () => {
     if (visible === false) {
       setVisible(true);
       setDisabledTheme(true);
     }
   };
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
+  function handleClickOutsideMob(event) {
+    if (themeRefMob.current && !themeRefMob.current.contains(event.target)) {
+      setDisabledTheme(false);
+      setVisible(false);
+    }
+  }
   function handleClickOutside(event) {
     if (themeRef.current && !themeRef.current.contains(event.target)) {
       setDisabledTheme(false);
@@ -86,13 +99,14 @@ const Layout = () => {
           navContainerClassName ? navContainerClassName : ""
         }`}
       >
-        <div ref={themeRef} className="theme-chooser" onClick={changeVisible}>
-          <button
-            disabled={disabledTheme}
-            className={`theme-button ${linkClassName}-b`}
-          ></button>
+        <div
+          className={`theme-chooser ${disabledTheme ? "hidden" : ""}`}
+          onClick={changeVisible}
+        >
+          <button className={`theme-button ${linkClassName}-b`}></button>
 
           <div
+            ref={themeRef}
             className={`dropdown-content ${
               visible ? "visible" : "not-visible"
             }`}
@@ -152,27 +166,34 @@ const Layout = () => {
 
       <div className="nav-display-override">
         <nav className="mobile-nav">
-          <div className="theme-chooser">
+          <div
+            className={`theme-chooser-mob ${disabledTheme ? "hidden" : ""}`}
+            onClick={changeVisible}
+          >
             <button className={`theme-button-mob ${linkClassName}-b`}></button>
-            <div className="no-display">
-              <div className="dropdown-content">
-                <button
-                  className="initial-btn"
-                  onClick={() => dispatch(setInitial())}
-                ></button>
-                <button
-                  className="blue"
-                  onClick={() => dispatch(setBlue())}
-                ></button>
-                <button
-                  className="gold"
-                  onClick={() => dispatch(setGold())}
-                ></button>
-                <button
-                  className="pink"
-                  onClick={() => dispatch(setPink())}
-                ></button>
-              </div>
+
+            <div
+              ref={themeRefMob}
+              className={`dropdown-content ${
+                visible ? "visible" : "not-visible"
+              }`}
+            >
+              <button
+                className="initial-btn"
+                onClick={() => dispatch(setInitial())}
+              ></button>
+              <button
+                className="blue"
+                onClick={() => dispatch(setBlue())}
+              ></button>
+              <button
+                className="gold"
+                onClick={() => dispatch(setGold())}
+              ></button>
+              <button
+                className="pink"
+                onClick={() => dispatch(setPink())}
+              ></button>
             </div>
           </div>
           <button
