@@ -45,16 +45,13 @@ const Layout = () => {
   const themeRefMob = useRef(null);
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mouseup", handleClickOutsideMob);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mouseup", handleClickOutsideMob);
     };
-  }, [themeRef]);
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutsideMob);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutsideMob);
-    };
-  }, [themeRefMob]);
+  }, []);
+
   const changeVisible = () => {
     if (visible === false) {
       setVisible(true);
@@ -62,6 +59,7 @@ const Layout = () => {
     }
   };
   function handleClickOutsideMob(event) {
+    console.log(themeRefMob.current, event.target);
     if (themeRefMob.current && !themeRefMob.current.contains(event.target)) {
       setDisabledTheme(false);
       setVisible(false);
@@ -174,7 +172,7 @@ const Layout = () => {
 
             <div
               ref={themeRefMob}
-              className={`dropdown-content ${
+              className={`dropdown-content-mob ${
                 visible ? "visible" : "not-visible"
               }`}
             >
