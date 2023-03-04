@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Projects.scss";
+import projectData from "./projectData";
+import ProjectCard from "./ind-projects";
 const Projects = () => {
   return (
     <div>
