@@ -40,10 +40,8 @@ const Layout = () => {
   const [hidden, toggleHidden] = useState(true);
   const [disabled, setDisabled] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [disabledThemeMob, setDisabledThemeMob] = useState(false);
   const [disabledTheme, setDisabledTheme] = useState(false);
   const themeRef = useRef(null);
-  const themeRefMob = useRef(null);
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
 
@@ -52,27 +50,13 @@ const Layout = () => {
     };
   }, []);
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutsideMob);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutsideMob);
-    };
-  }, []);
-
   const changeVisible = () => {
     if (visible === false) {
       setVisible(true);
       setDisabledTheme(true);
-      setDisabledThemeMob(true);
     }
   };
-  function handleClickOutsideMob(event) {
-    console.log(themeRefMob.current, event.target);
-    if (themeRefMob.current && !themeRefMob.current.contains(event.target)) {
-      setDisabledThemeMob(false);
-      setVisible(false);
-    }
-  }
+
   function handleClickOutside(event) {
     if (themeRef.current && !themeRef.current.contains(event.target)) {
       setDisabledTheme(false);
@@ -100,7 +84,7 @@ const Layout = () => {
   }
   return (
     <>
-      <div
+      <nav
         className={`navigation-bar-container ${
           navContainerClassName ? navContainerClassName : ""
         }`}
@@ -135,84 +119,55 @@ const Layout = () => {
             ></button>
           </div>
         </div>
-        <nav className="big-screen">
-          <div>
-            <Link to="/" className={`layout-link-${linkClassName} indHover`}>
-              Home
-            </Link>
-          </div>
+        <div className="big-screen">
+          <div className="flex-override-nav">
+            <div>
+              <Link to="/" className={`layout-link-${linkClassName} indHover`}>
+                Home
+              </Link>
+            </div>
 
-          <div>
-            <Link
-              to="/Resume"
-              className={`layout-link-${linkClassName} indHover`}
-            >
-              Resume
-            </Link>
-          </div>
-          <div>
-            <Link
-              to="/Projects"
-              className={`layout-link-${linkClassName} indHover`}
-            >
-              Projects
-            </Link>
-          </div>
+            <div>
+              <Link
+                to="/Resume"
+                className={`layout-link-${linkClassName} indHover`}
+              >
+                Resume
+              </Link>
+            </div>
+            <div>
+              <Link
+                to="/Projects"
+                className={`layout-link-${linkClassName} indHover`}
+              >
+                Projects
+              </Link>
+            </div>
 
-          <div>
-            <Link
-              to="/Contact"
-              className={`layout-link-${linkClassName} indHover`}
-            >
-              Contact
-            </Link>
-          </div>
-        </nav>
-      </div>
-
-      <div className="nav-display-override">
-        <nav className="mobile-nav">
-          <div
-            className={`theme-chooser-mob ${disabledThemeMob ? "hidden" : ""}`}
-            onClick={changeVisible}
-          >
-            <button className={`theme-button-mob ${linkClassName}-b`}></button>
-
-            <div
-              ref={themeRefMob}
-              className={`dropdown-content-mob  ${
-                visible ? "visible" : "not-visible"
-              }`}
-            >
-              <button
-                className="initial-btn"
-                onClick={() => dispatch(setInitial())}
-              ></button>
-              <button
-                className="blue"
-                onClick={() => dispatch(setBlue())}
-              ></button>
-              <button
-                className="gold"
-                onClick={() => dispatch(setGold())}
-              ></button>
-              <button
-                className="pink"
-                onClick={() => dispatch(setPink())}
-              ></button>
+            <div>
+              <Link
+                to="/Contact"
+                className={`layout-link-${linkClassName} indHover`}
+              >
+                Contact
+              </Link>
             </div>
           </div>
-          <button
-            disabled={disabled}
-            className={`hamburger ${hidden ? "closed" : "open"}`}
-            onClick={changeHidden}
-          >
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </button>
-        </nav>
-      </div>
+        </div>
+        <div className="nav-display-override">
+          <div className="mobile-nav">
+            <button
+              disabled={disabled}
+              className={`hamburger ${hidden ? "closed" : "open"}`}
+              onClick={changeHidden}
+            >
+              <span className="burger-line"></span>
+              <span className="burger-line"></span>
+              <span className="burger-line"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
       <div
         ref={sideNavRef}
         className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}
@@ -251,7 +206,6 @@ const Layout = () => {
           </div>
         </div>
       </div>
-
       <Outlet />
     </>
   );
