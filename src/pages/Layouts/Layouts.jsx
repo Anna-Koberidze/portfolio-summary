@@ -40,15 +40,22 @@ const Layout = () => {
   const [hidden, toggleHidden] = useState(true);
   const [disabled, setDisabled] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [disabledThemeMob, setDisabledThemeMob] = useState(false);
   const [disabledTheme, setDisabledTheme] = useState(false);
   const themeRef = useRef(null);
   const themeRefMob = useRef(null);
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("mouseup", handleClickOutsideMob);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("mouseup", handleClickOutsideMob);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutsideMob);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideMob);
     };
   }, []);
 
@@ -56,12 +63,13 @@ const Layout = () => {
     if (visible === false) {
       setVisible(true);
       setDisabledTheme(true);
+      setDisabledThemeMob(true);
     }
   };
   function handleClickOutsideMob(event) {
     console.log(themeRefMob.current, event.target);
     if (themeRefMob.current && !themeRefMob.current.contains(event.target)) {
-      setDisabledTheme(false);
+      setDisabledThemeMob(false);
       setVisible(false);
     }
   }
@@ -165,14 +173,14 @@ const Layout = () => {
       <div className="nav-display-override">
         <nav className="mobile-nav">
           <div
-            className={`theme-chooser-mob ${disabledTheme ? "hidden" : ""}`}
+            className={`theme-chooser-mob ${disabledThemeMob ? "hidden" : ""}`}
             onClick={changeVisible}
           >
             <button className={`theme-button-mob ${linkClassName}-b`}></button>
 
             <div
               ref={themeRefMob}
-              className={`dropdown-content-mob ${
+              className={`dropdown-content-mob  ${
                 visible ? "visible" : "not-visible"
               }`}
             >
@@ -197,7 +205,6 @@ const Layout = () => {
           <button
             disabled={disabled}
             className={`hamburger ${hidden ? "closed" : "open"}`}
-            // disabled={disabled}
             onClick={changeHidden}
           >
             <span className="burger-line"></span>

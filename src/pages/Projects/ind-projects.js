@@ -1,9 +1,10 @@
 function ProjectCard(props) {
   return (
-    <div className={props.className}>
+    <div key={props.index} className={`p-cards ${props.className}`}>
+      <img alt="screenshot of website" src={props.img} />
       <h2>{props.name}</h2>
-      <img>{props.img}</img>
       <p>{props.desc}</p>
+      <a href={props.link}>click to visit website</a>
     </div>
   );
 }
