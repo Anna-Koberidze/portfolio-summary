@@ -4,7 +4,9 @@ function ProjectCard(props) {
       <img alt="screenshot of website" src={props.img} />
       <h2>{props.name}</h2>
       <p>{props.desc}</p>
-      <a href={props.link}>click to visit website</a>
+      <button className="project-button">
+        <a href={props.link}>{props.text}</a>
+      </button>
     </div>
   );
 }

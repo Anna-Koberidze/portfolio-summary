@@ -15,6 +15,7 @@ const Projects = () => {
               img={project.image}
               desc={project.desc}
               link={project.link}
+              text={project.linkText}
             />
           );
         })}
