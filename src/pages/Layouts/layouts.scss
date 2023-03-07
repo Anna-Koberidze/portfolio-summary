@@ -20,13 +20,13 @@
 .navigation-bar-container {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   flex-direction: row;
   top: 0;
   z-index: 10;
   transition: 1s;
   position: sticky;
   width: 100%;
-  height: 60px;
   .flex-override-nav {
     height: 100%;
     display: flex;
@@ -38,8 +38,16 @@
       border-left-style: solid;
     }
   }
+  &:hover {
+    .mobile-nav {
+      .hamburger {
+        .burger-line {
+          background-color: white;
+        }
+      }
+    }
+  }
 }
-
 .blueTheme {
   background-color: var(--white-content);
   &:hover {
@@ -51,16 +59,14 @@
       color: var(--border-color);
     }
     div {
-      &:hover {
-        .indHover {
+      .indHover {
+        &:hover {
           color: var(--white-content);
         }
       }
     }
     .mobile-nav {
-      button {
-        background-color: var(--color-primary);
-      }
+      background-color: var(--color-primary);
     }
   }
 }
@@ -72,11 +78,14 @@
       color: var(--border-color);
     }
     div {
-      &:hover {
-        .indHover {
+      .indHover {
+        &:hover {
           color: var(--white-content);
         }
       }
+    }
+    .mobile-nav {
+      background-color: var(--color-secondary);
     }
   }
 }
@@ -90,11 +99,14 @@
       color: var(--border-color);
     }
     div {
-      &:hover {
-        .indHover {
+      .indHover {
+        &:hover {
           color: var(--white-content);
         }
       }
+    }
+    .mobile-nav {
+      background-color: darkorchid;
     }
   }
 }
@@ -107,11 +119,14 @@
       color: var(--border-color);
     }
     div {
-      &:hover {
-        .indHover {
+      .indHover {
+        &:hover {
           color: var(--white-content);
         }
       }
+    }
+    .mobile-nav {
+      background-color: var(--color-tertiary);
     }
   }
 }
@@ -167,7 +182,7 @@
   right: 0;
   width: fit-content;
   height: fit-content;
-  background-color: var(--mobile-nav);
+  background-color: var(--white-content);
   z-index: 7;
   transition: all 0.2s ease-in;
 }
@@ -195,11 +210,12 @@
   }
 }
 .mobile-nav {
+  transition: 1s;
   width: 100%;
   height: 40px;
   display: flex;
   justify-content: flex-end;
-  background: var(--mobile-nav);
+  background: var(--white-content);
 }
 .open {
   .burger-line:nth-child(1) {
@@ -333,6 +349,9 @@
   .big-screen {
     display: none;
   }
+  .navigation-bar-container {
+    height: 40px;
+  }
 }
 //hamburger
 @media screen and (min-width: 800px) {
@@ -344,5 +363,8 @@
   }
   .nav-display-override {
     display: none;
+  }
+  .navigation-bar-container {
+    height: 60px;
   }
 }
