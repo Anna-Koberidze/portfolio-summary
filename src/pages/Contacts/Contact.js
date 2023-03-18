@@ -43,7 +43,6 @@ const Contact = () => {
         <section className="linkedin">
           <label>linkedIn</label>
           <a
-            target="_blank"
             className="linkedin-link"
             href="https://www.linkedin.com/in/anna-koberidze-4759a91a2/"
           >
