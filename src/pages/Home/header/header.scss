@@ -24,6 +24,7 @@
 }
 
 .greeting {
+  overflow: hidden;
   text-align: center;
   margin: 100px 0;
 
@@ -32,6 +33,7 @@
   max-width: 60%;
 }
 .introduction {
+  overflow: hidden;
   text-align: center;
   margin: 10px;
   font-size: larger;
@@ -39,6 +41,7 @@
 }
 .header-photo {
   width: 400px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 700px) {
@@ -60,7 +63,6 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.342);
   transition: 300ms;
-
   &:hover {
     background: var(--icons-grey);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.342);
