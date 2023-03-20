@@ -39,7 +39,11 @@
     min-width: 300px;
     padding: 40px;
     label {
-      padding: 0 15px;
+      padding-right: 15px;
+      font-weight: 600;
+    }
+    p {
+      object-fit: contain;
     }
   }
   display: flex;
@@ -58,9 +62,6 @@
   .contacts-img {
     max-width: 100%;
     object-fit: cover;
-  }
-  label {
-    font-weight: 600;
   }
 }
 .initial-contact {
