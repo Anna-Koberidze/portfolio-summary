@@ -66,7 +66,7 @@ function Header() {
         products.
       </div>
       <button className="--next-button">
-        <Link className="--next-button-link" to="/Resume">
+        <Link className="--next-button-link" to="/Projects">
           next→
         </Link>
       </button>

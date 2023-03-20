@@ -129,14 +129,6 @@ const Layout = () => {
 
             <div>
               <Link
-                to="/Resume"
-                className={`layout-link-${linkClassName} indHover`}
-              >
-                Resume
-              </Link>
-            </div>
-            <div>
-              <Link
                 to="/Projects"
                 className={`layout-link-${linkClassName} indHover`}
               >
@@ -176,15 +168,6 @@ const Layout = () => {
           <div>
             <Link to="/" className={`layout-link-${linkClassName} indHover`}>
               Home
-            </Link>
-          </div>
-
-          <div>
-            <Link
-              to="/Resume"
-              className={`layout-link-${linkClassName} indHover`}
-            >
-              Resume
             </Link>
           </div>
           <div>
