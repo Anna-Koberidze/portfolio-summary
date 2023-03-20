@@ -17,6 +17,17 @@
   --icons-grey: #b9b9b9;
 }
 .div-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .div-body {
+    flex-direction: column-reverse;
+  }
+}
+.div-body {
   .gmail,
   .mobile,
   .location,
@@ -25,7 +36,11 @@
     display: flex;
     justify-content: space-between;
     width: 50vw;
+    min-width: 300px;
     padding: 40px;
+    label {
+      padding: 0 15px;
+    }
   }
   display: flex;
   .linkedin-link {

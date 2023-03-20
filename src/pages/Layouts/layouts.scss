@@ -178,7 +178,6 @@
 }
 .hamburger-sidebar {
   position: absolute;
-  // top: calc(50% + 60px);
   top: 40px;
   right: 0;
   width: fit-content;
@@ -230,12 +229,11 @@
   }
 }
 .dropdown-content {
-  transition: 200ms;
   background-color: var(--border-color);
   width: 44px;
   position: absolute;
   left: 50%;
-  top: calc(50% + 30px);
+  top: calc(100%);
   transform: translateX(-50%);
   z-index: 10;
   display: flex;
@@ -245,6 +243,7 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   pointer-events: all;
+  transition: all 0.2s ease-in;
 
   button {
     border: none;
@@ -259,6 +258,11 @@
   }
 }
 
+.not-visible {
+  overflow: hidden;
+  top: -300px;
+}
+
 .theme-chooser {
   width: 60px;
   height: 100%;
@@ -266,6 +270,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 11;
 
   .theme-button {
     color: white;
@@ -340,10 +345,6 @@
 
 .hidden {
   pointer-events: none;
-}
-
-.not-visible {
-  display: none;
 }
 
 @media screen and (max-width: 800px) {
