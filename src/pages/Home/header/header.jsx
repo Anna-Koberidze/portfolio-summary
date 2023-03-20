@@ -48,7 +48,7 @@ function Header() {
         data-aos-duration="3000"
         data-aos-easing="ease-in-sine"
         className="header-photo"
-        alt="photo illustration"
+        alt="illustration"
         src={imgSrc}
       />
       <div

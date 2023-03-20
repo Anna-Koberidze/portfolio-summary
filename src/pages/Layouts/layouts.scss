@@ -178,7 +178,8 @@
 }
 .hamburger-sidebar {
   position: absolute;
-  top: calc(50% + 60px);
+  // top: calc(50% + 60px);
+  top: 40px;
   right: 0;
   width: fit-content;
   height: fit-content;
@@ -187,7 +188,7 @@
   transition: all 0.2s ease-in;
 }
 .hidden-sidebar {
-  top: -310px;
+  top: -300px;
   overflow: hidden;
 }
 
