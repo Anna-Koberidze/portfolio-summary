@@ -25,6 +25,11 @@
 @media screen and (max-width: 800px) {
   .div-body {
     flex-direction: column-reverse;
+    .gmail {
+      p {
+        font-size: 12px;
+      }
+    }
     .gmail,
     .mobile,
     .location,
