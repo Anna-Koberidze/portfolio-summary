@@ -16,3 +16,33 @@ header h1 {
   font-weight: 200;
   font-size: 110px;
 } */
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    0deg,
+    rgba(185, 185, 185, 0.253) 0%,
+    rgba(10, 129, 209, 0.486) 100%
+  );
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(162, 210, 255, 1) 0%,
+    rgba(255, 200, 221, 1) 35%,
+    #cdb4db 100%
+  );
+}
