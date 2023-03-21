@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div>
       <div className="p-card-container">
-        {projectData.map((project, index) => {
+        {projectData.map((project) => {
           return (
             <ProjectCard
               index={project.key}

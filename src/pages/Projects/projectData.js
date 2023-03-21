@@ -6,7 +6,7 @@ export const projectData = [
     desc: "Landing page for modern minimalist banking - all rights have been reserved by the instructor Jonas Schmedtmann",
     link: "https://bankistanna.netlify.app",
     className: "bankist",
-    linkText: "Click to visit Bankist",
+    linkText: "Visit Bankist",
   },
   {
     key: 2,
@@ -15,7 +15,7 @@ export const projectData = [
     desc: " application for modern minimalist banking - (user: js , password: 1111) - all rights have been reserved by the instructor Jonas Schmedtmann",
     link: "https://bankist-app-anna.netlify.app",
     className: "bankist-app",
-    linkText: "Click to visit Bankist-App",
+    linkText: "Visit Bankist-App",
   },
   {
     key: 3,
@@ -24,7 +24,7 @@ export const projectData = [
     desc: "application for recording workouts on a map - all rights have been reserved by the instructor Jonas Schmedtmann",
     link: "https://mapty-anna.netlify.app",
     className: "mapty",
-    linkText: "Click to visit Mapty",
+    linkText: "Visit Mapty",
   },
   {
     key: 4,
@@ -33,7 +33,7 @@ export const projectData = [
     desc: "100 days of code calendar for checking off progress",
     link: "https://100daysofcodecalendar.netlify.app",
     className: "days-of-code",
-    linkText: "Click to visit 100 days of code",
+    linkText: "Visit 100 days of code",
   },
 ];
 export default projectData;
