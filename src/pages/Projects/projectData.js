@@ -12,7 +12,7 @@ export const projectData = [
     key: 2,
     image: "/images/bankist-app.jpg",
     heading: "Bankist-App",
-    desc: " application for modern minimalist banking - (user: js , password: 1111) - all rights have been reserved by the instructor Jonas Schmedtmann",
+    desc: " application for modern minimalist banking - all rights have been reserved by the instructor Jonas Schmedtmann",
     link: "https://bankist-app-anna.netlify.app",
     className: "bankist-app",
     linkText: "Visit Bankist-App",
