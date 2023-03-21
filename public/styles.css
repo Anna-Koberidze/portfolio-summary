@@ -32,8 +32,8 @@ header h1 {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     0deg,
-    rgba(185, 185, 185, 0.253) 0%,
-    rgba(10, 129, 209, 0.486) 100%
+    rgba(185, 185, 185, 0.603) 0%,
+    rgba(10, 129, 209, 0.377) 100%
   );
 }
 
