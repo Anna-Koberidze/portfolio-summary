@@ -48,3 +48,13 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .p-card-container {
+    .bankist-app {
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
