@@ -175,6 +175,8 @@
 .flex-sidebar-override {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .hamburger-sidebar {
   position: fixed;
@@ -182,9 +184,13 @@
   right: 0;
   width: fit-content;
   height: fit-content;
-  background-color: var(--white-content);
+  background-color: rgba(255, 255, 255, 0.253);
   z-index: 7;
   transition: all 0.2s ease-in;
+  backdrop-filter: blur(5px);
+  .indHover {
+    margin: 20px;
+  }
 }
 .hidden-sidebar {
   top: -300px;
@@ -229,7 +235,8 @@
   }
 }
 .dropdown-content {
-  background-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(1px);
   width: 44px;
   position: absolute;
   left: 50%;
@@ -240,11 +247,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   pointer-events: all;
   transition: all 0.2s ease-in;
-
+  overflow: hidden;
   button {
     border: none;
     border-radius: 50%;
@@ -264,13 +270,15 @@
 }
 
 .theme-chooser {
-  width: 60px;
+  margin-right: 20px;
+  width: 30px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 11;
+  border-radius: 50%;
 
   .theme-button {
     color: white;
