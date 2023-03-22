@@ -94,7 +94,6 @@ const Layout = () => {
           onClick={changeVisible}
         >
           <button className={`theme-button ${linkClassName}-b`}></button>
-
           <div
             ref={themeRef}
             className={`dropdown-content ${
