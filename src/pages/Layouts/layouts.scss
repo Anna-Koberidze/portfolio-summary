@@ -247,6 +247,7 @@
   top: calc(100%);
   transform: translateX(-50%);
   z-index: 6;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,7 +274,7 @@
 
 .not-visible {
   overflow: hidden;
-  top: -300px;
+  opacity: 0;
 }
 
 .theme-chooser {
