@@ -6,11 +6,15 @@ function ProjectCard(props) {
       </a>
       <h2>{props.name}</h2>
       <p>{props.desc}</p>
-      <button className="project-button">
-        <a target="_blank" rel="noreferrer" href={props.link}>
-          {props.text}
-        </a>
-      </button>
+
+      <a
+        className="button-link-projects"
+        target="_blank"
+        rel="noreferrer"
+        href={props.link}
+      >
+        <button className="project-button">{props.text} </button>
+      </a>
     </div>
   );
 }
