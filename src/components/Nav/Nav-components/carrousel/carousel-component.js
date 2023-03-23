@@ -40,8 +40,8 @@ const Carousel = () => {
       break;
   }
   return (
-    <CCarousel controls indicators interval={4000} pause="hover" touch>
-      <CCarouselItem className="--carousel-item" interval={1200}>
+    <CCarousel controls indicators interval={6000} pause="hover" touch>
+      <CCarouselItem className="--carousel-item" interval={6000}>
         <CImage
           className="d-block w-100 carouselImage"
           src={sliderData[0].image}
