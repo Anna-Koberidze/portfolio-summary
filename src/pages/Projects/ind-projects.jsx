@@ -3,12 +3,9 @@ import { useSelector } from "react-redux";
 function ProjectCard(props) {
   const theme = useSelector((state) => state.theme.theme);
   let btnThemeClassName;
-  let lblTheme;
-
   switch (theme) {
     case 1:
       btnThemeClassName = "initial-btn-p";
-      lblTheme = "";
       break;
     case 2:
       btnThemeClassName = "blueTheme-btn-p";
@@ -26,21 +23,38 @@ function ProjectCard(props) {
   return (
     <div key={props.index} className={`p-cards ${props.className}`}>
       <a target="_blank" rel="noreferrer" href={props.link}>
-        <img alt="screenshot of website" src={props.img} />
+        <img
+          className="website-image"
+          alt="screenshot of website"
+          src={props.img}
+        />
       </a>
       <h2>{props.name}</h2>
       <p>{props.desc}</p>
-
-      <a
-        className="button-link-projects"
-        target="_blank"
-        rel="noreferrer"
-        href={props.link}
-      >
-        <button className={`project-button ${btnThemeClassName}`}>
-          {props.text}
-        </button>
-      </a>
+      <div className="buttons-project-container">
+        <a
+          className="button-link-projects"
+          target="_blank"
+          rel="noreferrer"
+          href={props.link}
+        >
+          <button className={`project-button ${btnThemeClassName}`}>
+            {props.text}
+          </button>
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          className="link-to-git"
+          href={props.git}
+        >
+          <img
+            alt="github-logo"
+            className="github-logo-img"
+            src="/images/github-logo-darker.png"
+          />
+        </a>
+      </div>
     </div>
   );
 }

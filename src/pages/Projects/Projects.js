@@ -16,6 +16,7 @@ const Projects = () => {
               desc={project.desc}
               link={project.link}
               text={project.linkText}
+              git={project.gitLink}
             />
           );
         })}

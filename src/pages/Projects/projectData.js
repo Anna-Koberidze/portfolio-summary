@@ -7,6 +7,7 @@ export const projectData = [
     link: "https://bankistanna.netlify.app",
     className: "bankist",
     linkText: "Visit Bankist",
+    gitLink: "https://github.com/Anna-Koberidze/bankist-website",
   },
   {
     key: 2,
@@ -16,6 +17,7 @@ export const projectData = [
     link: "https://bankist-app-anna.netlify.app",
     className: "bankist-app",
     linkText: "Visit Bankist-App",
+    gitLink: "https://github.com/Anna-Koberidze/bankist-app",
   },
   {
     key: 3,
@@ -25,6 +27,7 @@ export const projectData = [
     link: "https://mapty-anna.netlify.app",
     className: "mapty",
     linkText: "Visit Mapty",
+    gitLink: "https://github.com/Anna-Koberidze/mapty",
   },
   {
     key: 4,
@@ -34,6 +37,7 @@ export const projectData = [
     link: "https://100daysofcodecalendar.netlify.app",
     className: "days-of-code",
     linkText: "Visit 100 days of code",
+    gitLink: "https://github.com/Anna-Koberidze/100-days-of-code-calendar",
   },
 ];
 export default projectData;
