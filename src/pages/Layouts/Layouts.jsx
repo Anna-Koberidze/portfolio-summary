@@ -15,26 +15,32 @@ const Layout = () => {
   const theme = useSelector((state) => state.theme.theme);
   let navContainerClassName;
   let linkClassName;
+  let colorSidebar;
   switch (theme) {
     case 1:
       navContainerClassName = "initial";
       linkClassName = "initial";
+      colorSidebar = "initial-sidebar";
       break;
     case 2:
       navContainerClassName = "blueTheme";
       linkClassName = "blueTheme";
+      colorSidebar = "blue-sidebar";
       break;
     case 3:
       navContainerClassName = "goldTheme";
       linkClassName = "goldTheme";
+      colorSidebar = "gold-sidebar";
       break;
     case 4:
       navContainerClassName = "pinkTheme";
       linkClassName = "pinkTheme";
+      colorSidebar = "pink-sidebar";
       break;
     default:
       navContainerClassName = "";
       linkClassName = "";
+      colorSidebar = "";
       break;
   }
   const [hidden, toggleHidden] = useState(true);
@@ -161,7 +167,7 @@ const Layout = () => {
       </nav>
       <div
         ref={sideNavRef}
-        className={`hamburger-sidebar ${hidden ? "hidden-sidebar" : ""}`}
+        className={`hamburger-sidebar  ${hidden ? "hidden-sidebar" : ""}`}
       >
         <div className="flex-sidebar-override">
           <div>

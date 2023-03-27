@@ -182,18 +182,30 @@
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
   font-size: 15px;
+  background-color: #b9b9b92d;
   position: fixed;
   top: 40px;
   right: 0;
   width: fit-content;
   height: fit-content;
-  background-color: rgba(255, 255, 255, 0.253);
   z-index: 7;
   transition: all 0.2s ease-in;
   backdrop-filter: blur(5px);
   .indHover {
     margin: 20px;
   }
+}
+.initial-sidebar {
+  background-color: #ff586044;
+}
+.blue-sidebar {
+  background-color: #39b38460;
+}
+.gold-sidebar {
+  background-color: #ffcd0379;
+}
+.pink-sidebar {
+  background-color: #9932cc33;
 }
 .hidden-sidebar {
   top: -300px;
