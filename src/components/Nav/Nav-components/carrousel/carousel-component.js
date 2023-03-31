@@ -89,22 +89,6 @@ const Carousel = () => {
           </button>
         </CCarouselCaption>
       </CCarouselItem>
-      <CCarouselItem className="--carousel-item" interval={4000}>
-        <CImage
-          className="d-block w-100 carouselImage"
-          src={sliderData[3].image}
-          alt="slide 4"
-        />
-        <CCarouselCaption className="background-class">
-          <h5>{sliderData[3].heading}</h5>
-          <p>{sliderData[3].desc}</p>
-          <button className={`--btn ${btnClassName}`}>
-            <Link className="-btn-link" to={sliderData[3].link}>
-              {sliderData[3].button}
-            </Link>
-          </button>
-        </CCarouselCaption>
-      </CCarouselItem>
     </CCarousel>
   );
 };

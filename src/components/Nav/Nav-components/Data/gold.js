@@ -8,14 +8,7 @@ export const goldData = [
     link: "/",
     insideLink: "#--section1",
   },
-  {
-    image: "/images/image-10.jpg",
-    heading: "My Resume",
-    desc: "Click bellow to take a look at my resume",
-    button: "Resume",
 
-    link: "/Resume",
-  },
   {
     image: "/images/image-11.jpg",
     heading: "My projects",
@@ -31,6 +24,13 @@ export const goldData = [
     button: "Contact",
 
     link: "/Contact",
+  },
+  {
+    image: "/images/image-10.jpg",
+    heading: "My Resume",
+    desc: "Click bellow to download my resume",
+    button: "Resume",
+    link: "/documents/Anna Koberidze - Resume.pdf",
   },
 ];
 export default goldData;
