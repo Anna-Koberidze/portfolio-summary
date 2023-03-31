@@ -30,7 +30,6 @@ export const blueData = [
     heading: "My Resume",
     desc: "Click bellow to download my resume",
     button: "Resume",
-    link: "/documents/Anna Koberidze - Resume.pdf",
   },
 ];
 export default blueData;
