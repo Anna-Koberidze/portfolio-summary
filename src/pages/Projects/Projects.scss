@@ -99,28 +99,28 @@
   }
 }
 .initial-btn-p {
-  background-color: var(--border-color);
+  background-color: #f8a6aa;
   &:hover {
     background-color: var(--color-tertiary);
     color: white;
   }
 }
 .blueTheme-btn-p {
-  background-color: var(--border-color);
+  background-color: #90d6bb;
   &:hover {
     background-color: var(--color-primary);
     color: white;
   }
 }
 .goldTheme-btn-p {
-  background-color: var(--border-color);
+  background-color: #e9c77e;
   &:hover {
     background-color: var(--color-secondary);
     color: black;
   }
 }
 .pinkTheme-btn-p {
-  background-color: var(--border-color);
+  background-color: rgb(182, 141, 204);
   &:hover {
     background-color: darkorchid;
     color: white;
