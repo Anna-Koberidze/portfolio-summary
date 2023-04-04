@@ -17,6 +17,7 @@
   --icons-grey: #b9b9b9;
   --mobile-nav: #e6e6e9;
 }
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 .navigation-bar-container {
   display: flex;
   justify-content: flex-end;
@@ -39,6 +40,14 @@
     }
   }
   &:hover {
+    .indicator-theme-content {
+      h2:nth-child(1) {
+        -webkit-text-stroke: 1px white;
+      }
+      h2:nth-child(2) {
+        color: white;
+      }
+    }
     .mobile-nav {
       .hamburger {
         .burger-line {
@@ -46,6 +55,90 @@
         }
       }
     }
+  }
+}
+.indicator-theme-content {
+  font-family: "Poppins", sans-serif;
+
+  .indicator-theme {
+    width: 100;
+    position: relative;
+    h2 {
+      margin: 0;
+      color: #fff;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+    }
+    h2:nth-child(1) {
+      color: transparent;
+    }
+    h2:nth-child(2) {
+      animation: animate 3s ease-in-out infinite;
+    }
+  }
+  .redText {
+    h2:nth-child(1) {
+      -webkit-text-stroke: 1px var(--color-tertiary);
+    }
+    h2:nth-child(2) {
+      color: var(--color-tertiary-darker);
+    }
+  }
+  .blueText {
+    h2:nth-child(1) {
+      -webkit-text-stroke: 1px var(--color-primary);
+    }
+    h2:nth-child(2) {
+      color: var(--color-primary-darker);
+    }
+  }
+  .goldText {
+    h2:nth-child(1) {
+      -webkit-text-stroke: 1px var(--color-secondary);
+    }
+    h2:nth-child(2) {
+      color: var(--color-secondary-darker);
+    }
+  }
+  .pinkText {
+    h2:nth-child(1) {
+      -webkit-text-stroke: 1px orchid;
+    }
+    h2:nth-child(2) {
+      color: darkorchid;
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
   }
 }
 .blueTheme {
@@ -194,19 +287,6 @@
   .indHover {
     margin: 20px;
   }
-}
-//just add ${colorSidebar} inside the hamburger-sidebar div className and it'll change colors with theme changes
-.initial-sidebar {
-  background-color: #ff586044;
-}
-.blue-sidebar {
-  background-color: #39b38460;
-}
-.gold-sidebar {
-  background-color: #ffcd0379;
-}
-.pink-sidebar {
-  background-color: #9932cc33;
 }
 .hidden-sidebar {
   top: -300px;
@@ -385,8 +465,15 @@
   .navigation-bar-container {
     height: 40px;
   }
+  .indicator-theme {
+    h2 {
+      text-align: center;
+      width: 300px;
+      left: -130px;
+      font-size: 17px;
+    }
+  }
 }
-//hamburger
 @media screen and (min-width: 800px) {
   .hamburger {
     display: none;
@@ -399,5 +486,20 @@
   }
   .navigation-bar-container {
     height: 60px;
+  }
+  .indicator-theme {
+    h2 {
+      width: 400px;
+      font-size: 25px;
+      left: -180px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navigation-bar-container {
+    .indicator-theme-content {
+      display: none;
+    }
   }
 }

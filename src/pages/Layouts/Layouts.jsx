@@ -15,32 +15,37 @@ const Layout = () => {
   const theme = useSelector((state) => state.theme.theme);
   let navContainerClassName;
   let linkClassName;
-  let colorSidebar;
+  let textColorClassName;
+
   switch (theme) {
     case 1:
       navContainerClassName = "initial";
       linkClassName = "initial";
-      colorSidebar = "initial-sidebar";
+      textColorClassName = "redText";
+
       break;
     case 2:
       navContainerClassName = "blueTheme";
       linkClassName = "blueTheme";
-      colorSidebar = "blue-sidebar";
+      textColorClassName = "blueText";
+
       break;
     case 3:
       navContainerClassName = "goldTheme";
       linkClassName = "goldTheme";
-      colorSidebar = "gold-sidebar";
+      textColorClassName = "goldText";
+
       break;
     case 4:
       navContainerClassName = "pinkTheme";
       linkClassName = "pinkTheme";
-      colorSidebar = "pink-sidebar";
+      textColorClassName = "pinkText";
       break;
     default:
       navContainerClassName = "";
       linkClassName = "";
-      colorSidebar = "";
+      textColorClassName = "";
+
       break;
   }
   const [hidden, toggleHidden] = useState(true);
@@ -95,6 +100,12 @@ const Layout = () => {
           navContainerClassName ? navContainerClassName : ""
         }`}
       >
+        <div className="indicator-theme-content">
+          <div className={`indicator-theme ${textColorClassName}`}>
+            <h2>click to choose your theme →</h2>
+            <h2>click to choose your theme →</h2>
+          </div>
+        </div>
         <div
           className={`theme-chooser ${disabledTheme ? "hidden" : ""}`}
           onClick={changeVisible}
