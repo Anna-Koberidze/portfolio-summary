@@ -40,7 +40,7 @@ function Header() {
         data-aos-duration="1500"
         className={`greeting ${introClassName}`}
       >
-        Hello, I'm Anna,<br></br> I'm a Junior front-end developer. <br></br>
+        Hello, I'm Anna,<br></br> I'm a Front-End developer. <br></br>
         Nice to meet you.
       </h1>
       <img
